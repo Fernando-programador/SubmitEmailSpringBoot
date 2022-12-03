@@ -1,32 +1,19 @@
 package com.fsc.models;
 
 import java.util.List;
+import java.util.Objects;
 
+//@Entity
+//@Table(name = "enviado")
 public class EmailMessage {
 
 	private String assunto;
 	
-	private String messagem;
+	private String mensagem;
 	
 	private String remetente;
 	
 	private List<String> destinatario;
-
-	
-	
-	public EmailMessage() {
-	}
-	
-	public EmailMessage(String assunto, String messagem, String remetente, List<String> destinatario) {
-		super();
-		this.assunto = assunto;
-		this.messagem = messagem;
-		this.remetente = remetente;
-		this.destinatario = destinatario;
-	}
-
-
-
 
 	public String getAssunto() {
 		return assunto;
@@ -36,12 +23,14 @@ public class EmailMessage {
 		this.assunto = assunto;
 	}
 
-	public String getMessagem() {
-		return messagem;
+	
+
+	public String getMensagem() {
+		return mensagem;
 	}
 
-	public void setMessagem(String messagem) {
-		this.messagem = messagem;
+	public void setMensagem(String mensagem) {
+		this.mensagem = mensagem;
 	}
 
 	public String getRemetente() {
@@ -59,6 +48,9 @@ public class EmailMessage {
 	public void setDestinatario(List<String> destinatario) {
 		this.destinatario = destinatario;
 	}
+
+	
+	
 	
 	
 }

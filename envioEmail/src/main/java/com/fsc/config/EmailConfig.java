@@ -7,9 +7,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
-import org.springframework.mail.MailSender;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
+
+import service.EmailService;
 
 @Configuration
 @PropertySource("classpath:env/mail.properties")
@@ -17,6 +18,8 @@ public class EmailConfig {
 
 	@Autowired
 	private Environment environment;
+	
+	
 	
 	@Bean
 	public JavaMailSender javaMailSender() {
