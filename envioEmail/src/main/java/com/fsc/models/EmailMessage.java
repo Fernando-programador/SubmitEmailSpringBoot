@@ -1,10 +1,7 @@
 package com.fsc.models;
 
 import java.util.List;
-import java.util.Objects;
 
-//@Entity
-//@Table(name = "enviado")
 public class EmailMessage {
 
 	private String assunto;

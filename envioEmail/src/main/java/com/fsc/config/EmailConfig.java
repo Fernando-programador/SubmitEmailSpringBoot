@@ -10,7 +10,7 @@ import org.springframework.core.env.Environment;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
-import service.EmailService;
+
 
 @Configuration
 @PropertySource("classpath:env/mail.properties")
@@ -29,7 +29,7 @@ public class EmailConfig {
 		mailSender.setPort(environment.getProperty("mail.smtp.port", Integer.class));
 		mailSender.setUsername(environment.getProperty("mail.smtp.username"));
 		mailSender.setPassword(environment.getProperty("mail.smtp.password"));
-	
+		
 		Properties properties = mailSender.getJavaMailProperties();
 		
 		properties.put("mail.transport.protocol", "smtp");
